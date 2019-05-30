@@ -21,9 +21,31 @@
    (quote
     ("e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/js/js.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/web/web.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org")))
  '(org-html-doctype "html5")
+ '(org-latex-classes
+   (quote
+    (("article" "\\documentclass[11pt]{article}"
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+     ("report" "\\documentclass[11pt]{report}"
+      ("\\part{%s}" . "\\part*{%s}")
+      ("\\chapter{%s}" . "\\chapter*{%s}")
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+     ("book" "\\documentclass[11pt]{book}"
+      ("\\part{%s}" . "\\part*{%s}")
+      ("\\chapter{%s}" . "\\chapter*{%s}")
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+     ("coursework" "\\documentclass{coursework}"
+      ("" . "")))))
  '(package-selected-packages
    (quote
-    (ox-gfm emmet-mode htmlize indium vlf django-mode pydoc realgud solarized-theme python-django php+-mode php-auto-yasnippets web-mode django-snippets python-docstring yasnippet-snippets emms material-theme pydoc-info python-mode elpy ein anaconda-mode auto-complete)))
+    (toc-org org-ref lorem-ipsum ox-gfm emmet-mode htmlize indium vlf django-mode pydoc realgud solarized-theme python-django php+-mode php-auto-yasnippets web-mode django-snippets python-docstring yasnippet-snippets emms material-theme pydoc-info python-mode elpy ein anaconda-mode auto-complete)))
  '(shell-mode-hook nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -236,3 +258,36 @@
 (require 'ispell)
 
 
+(setq holiday-local-holidays '((holiday-fixed 1 7 "Рождество Христово")
+			       (holiday-fixed 2 23 "День защитника Отечества")
+			       (holiday-fixed 3 8 "Международный женский день")
+			       (holiday-fixed 5 1 "Праздник Весны и Труда")
+			       (holiday-fixed 5 9 "День Победы")
+			       (holiday-fixed 6 12 "День России")
+			       (holiday-fixed 11 4 "День народного единства")))
+(setq org-entities-user '("yat" "" "" "" "" "ѣ"))
+(require 'org-ref)
+
+;; toc-org
+(if (require 'toc-org nil t)
+    (add-hook 'org-mode-hook 'toc-org-mode)
+  (warn "toc-org not found"))
+
+;; lilypond-mode
+;; from lilypond-init.el
+
+;; start lilypond-init.el 
+(setq load-path (append (list (expand-file-name "~/.emacs.d/site-lisp")) load-path))
+
+(autoload 'LilyPond-mode "lilypond-mode" "LilyPond Editing Mode" t)
+(add-to-list 'auto-mode-alist '("\\.ly$" . LilyPond-mode))
+(add-to-list 'auto-mode-alist '("\\.ily$" . LilyPond-mode))
+(add-hook 'LilyPond-mode-hook (lambda () (turn-on-font-lock)))
+;; end lilypond-init.el
+
+
+; (autoload 'LilyPond-mode "lilypond-mode")
+; (setq auto-mode-alist
+;       (cons '("\\.ly$" . LilyPond-mode) auto-mode-alist))
+; 
+; (add-hook 'LilyPond-mode-hook (lambda () (turn-on-font-lock)))
