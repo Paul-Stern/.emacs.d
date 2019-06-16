@@ -9,14 +9,34 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   ["#d2ceda" "#f2241f" "#67b11d" "#b1951d" "#3a81c3" "#a31db1" "#21b8c7" "#655370"])
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (mine)))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
    (quote
-    ("a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "7d690aa1f65a4d87a4c70b737a7d6da45960670b6e4372260550c0808f6e74b0" default)))
+    ("b56e94f1b4d5ae0a57729b013be18044fe60e849ba4393cdc64b36aa73f09688" "8187f2437a6d46e47a8d06d71d01f1e1a711f478e69199b8af6d27c2f82671b2" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3" "efbe8f0a87281bcfa5e560d5ca10268c735de3a3bb160b54c520d02609aed9d8" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "7d690aa1f65a4d87a4c70b737a7d6da45960670b6e4372260550c0808f6e74b0" default)))
  '(default-input-method "russian-computer")
+ '(fci-rule-color "#37474f")
  '(hl-sexp-background-color "#1c1f26")
+ '(hl-todo-keyword-faces
+   (quote
+    (("TODO" . "#dc752f")
+     ("NEXT" . "#dc752f")
+     ("THEM" . "#2d9574")
+     ("PROG" . "#3a81c3")
+     ("OKAY" . "#3a81c3")
+     ("DONT" . "#f2241f")
+     ("FAIL" . "#f2241f")
+     ("DONE" . "#42ae2c")
+     ("NOTE" . "#b1951d")
+     ("KLUDGE" . "#b1951d")
+     ("HACK" . "#b1951d")
+     ("TEMP" . "#b1951d")
+     ("FIXME" . "#dc752f")
+     ("XXX+" . "#dc752f")
+     ("\\?\\?\\?+" . "#dc752f"))))
  '(org-agenda-files
    (quote
     ("e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/js/js.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/web/web.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org")))
@@ -45,8 +65,31 @@
       ("" . "")))))
  '(package-selected-packages
    (quote
-    (toc-org org-ref lorem-ipsum ox-gfm emmet-mode htmlize indium vlf django-mode pydoc realgud solarized-theme python-django php+-mode php-auto-yasnippets web-mode django-snippets python-docstring yasnippet-snippets emms material-theme pydoc-info python-mode elpy ein anaconda-mode auto-complete)))
- '(shell-mode-hook nil))
+    (spacemacs-theme use-package ox-hugo writeroom-mode flymd toc-org org-ref lorem-ipsum ox-gfm emmet-mode htmlize indium vlf django-mode pydoc realgud solarized-theme python-django php+-mode php-auto-yasnippets web-mode django-snippets python-docstring yasnippet-snippets emms material-theme pydoc-info python-mode elpy ein anaconda-mode auto-complete)))
+ '(pdf-view-midnight-colors (quote ("#655370" . "#fbf8ef")))
+ '(shell-mode-hook nil)
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#f36c60")
+     (40 . "#ff9800")
+     (60 . "#fff59d")
+     (80 . "#8bc34a")
+     (100 . "#81d4fa")
+     (120 . "#4dd0e1")
+     (140 . "#b39ddb")
+     (160 . "#f36c60")
+     (180 . "#ff9800")
+     (200 . "#fff59d")
+     (220 . "#8bc34a")
+     (240 . "#81d4fa")
+     (260 . "#4dd0e1")
+     (280 . "#b39ddb")
+     (300 . "#f36c60")
+     (320 . "#ff9800")
+     (340 . "#fff59d")
+     (360 . "#8bc34a"))))
+ '(vc-annotate-very-old-color nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -79,7 +122,9 @@
   (package-refresh-contents))
 
 (defvar myPackages
-  '(;; free space
+  '(;;
+    use-package
+    ;; free space
     ein    
     elpy
     emmet-mode
@@ -92,24 +137,38 @@
     web-mode
     yasnippet
     yasnippet-snippets
+    ;; themes
+    habamax-theme
     zenburn-theme
     ;; javascript
     js2-mode
-    company-tern))
+    company-tern
+    ;; writing
+    flymd
+    writeroom-mode
+    ;; org backends
+    ox-hugo
+    ))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
       (package-install package)))
       myPackages)
 
+;; Using use-package
+;; (use-package habamax-theme
+;;   :config
+;;   (setq habamax-theme-variable-heading-heights t)
+;;   (load-theme 'habamax t))
+
 
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
 
-(load-theme
- 'material ;; load material theme
- ;; 'zenburn
- t)
+;; (load-theme
+;;  'material ;; load material theme
+;;  ;; 'zenburn
+;;  t)
 
 ;; tern-mode
 (add-to-list 'load-path "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/github/tern/emacs/")
