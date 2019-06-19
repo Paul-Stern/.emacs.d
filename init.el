@@ -45,11 +45,12 @@
       (package-install package)))
       myPackages)
 
+;; habamax-theme
 ;; Using use-package
-;; (use-package habamax-theme
-;;   :config
-;;   (setq habamax-theme-variable-heading-heights t)
-;;   (load-theme 'habamax t))
+(use-package habamax-theme
+  :config
+  (setq habamax-theme-variable-heading-heights t)
+  (load-theme 'habamax t))
 
 
 ;; BASIC CUSTOMIZATION
@@ -154,9 +155,66 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   (vector "#212121" "#B71C1C" "#558b2f" "#FFA000" "#2196f3" "#4527A0" "#00796b" "#FAFAFA"))
  '(custom-safe-themes
    (quote
-    ("efbe8f0a87281bcfa5e560d5ca10268c735de3a3bb160b54c520d02609aed9d8" default))))
+    ("732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3" "efbe8f0a87281bcfa5e560d5ca10268c735de3a3bb160b54c520d02609aed9d8" default)))
+ '(fci-rule-color "#ECEFF1")
+ '(hl-sexp-background-color "#efebe9")
+ '(org-agenda-files
+   (quote
+    ("e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
+ '(org-latex-classes
+   (quote
+    (("custom" "\\documentclass[14pt]{custom}"
+      ("" . ""))
+     ("article" "\\documentclass[11pt]{article}"
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+     ("report" "\\documentclass[11pt]{report}"
+      ("\\part{%s}" . "\\part*{%s}")
+      ("\\chapter{%s}" . "\\chapter*{%s}")
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+     ("book" "\\documentclass[11pt]{book}"
+      ("\\part{%s}" . "\\part*{%s}")
+      ("\\chapter{%s}" . "\\chapter*{%s}")
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))))
+ '(org-latex-default-class "article")
+ '(package-selected-packages
+   (quote
+    (org zenburn-theme yasnippet-snippets writeroom-mode web-mode vlf use-package toc-org spacemacs-theme racket-mode py-autopep8 ox-hugo ox-gfm org-ref material-theme lorem-ipsum indium habamax-theme flymd flycheck emmet-mode elpy ein company-tern)))
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#B71C1C")
+     (40 . "#FF5722")
+     (60 . "#FFA000")
+     (80 . "#558b2f")
+     (100 . "#00796b")
+     (120 . "#2196f3")
+     (140 . "#4527A0")
+     (160 . "#B71C1C")
+     (180 . "#FF5722")
+     (200 . "#FFA000")
+     (220 . "#558b2f")
+     (240 . "#00796b")
+     (260 . "#2196f3")
+     (280 . "#4527A0")
+     (300 . "#B71C1C")
+     (320 . "#FF5722")
+     (340 . "#FFA000")
+     (360 . "#558b2f"))))
+ '(vc-annotate-very-old-color nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
