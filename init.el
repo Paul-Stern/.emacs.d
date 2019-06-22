@@ -169,7 +169,9 @@
     ("e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
  '(org-latex-classes
    (quote
-    (("custom" "\\documentclass[14pt]{custom}"
+    (("coursework" "\\documentclass{coursework}"
+      ("" . ""))
+     ("custom" "\\documentclass[14pt]{custom}"
       ("" . ""))
      ("article" "\\documentclass[11pt]{article}"
       ("\\section{%s}" . "\\section*{%s}")
