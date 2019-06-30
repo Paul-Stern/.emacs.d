@@ -14,26 +14,16 @@
 (defvar myPackages
   '(;;
     use-package
-    ;; free space
-    ;; ein    
-    ;; elpy
-    ;; emmet-mode
-    ;; flycheck
-    ;; indium
-    ;; material-theme
+    emmet-mode
+    flycheck
     ;; py-autopep8
-    ;; racket-mode
     ;; ;; tern
     web-mode
     ;; yasnippet
     ;; yasnippet-snippets
-    ;; ;; themes
+    ;; themes
     habamax-theme
-    ;; zenburn-theme
-    ;; javascript
-    ;; js2-mode
     ;; company-tern
-    ;; writing
     flymd
     writeroom-mode
     ;; org backends
@@ -125,7 +115,6 @@
 			       (holiday-fixed 6 12 "День России")
 			       (holiday-fixed 11 4 "День народного единства")))
 (setq org-entities-user '("yat" "" "" "" "" "ѣ"))
-;; (require 'org-ref)
 
 ;; toc-org
 ;; (if (require 'toc-org nil t)
@@ -167,10 +156,6 @@
  '(org-agenda-files
    (quote
     (
-     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
-     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й\ семестр/yspu.org"
-     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
-     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org"
      "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
      "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й\ семестр/yspu.org"
      "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
@@ -205,29 +190,20 @@
    (quote
     (
      org
-     ;; zenburn-theme
-     ;; yasnippet-snippets
      writeroom-mode
      web-mode
-     ;; vlf
      use-package
      toc-org
-     ;; spacemacs-theme
-     ;; racket-mode
      py-autopep8
      ox-hugo
      ox-gfm
      org-ref
-     ;; material-theme
      lorem-ipsum
-     ;; indium
      habamax-theme
      flymd
      flycheck
      emmet-mode
      elpy
-     ;; ein
-     ;; company-tern
      )))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
@@ -252,9 +228,3 @@
      (360 . "#558b2f"))))
  '(vc-annotate-very-old-color nil))
 
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(default ((t (:inherit nil :stipple nil :background "SystemWindow" :foreground "SystemWindowText" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Hack")))))
