@@ -15,24 +15,24 @@
   '(;;
     use-package
     ;; free space
-    ein    
-    elpy
-    emmet-mode
-    flycheck
-    indium
-    material-theme
-    py-autopep8
-    racket-mode
-    ;; tern
+    ;; ein    
+    ;; elpy
+    ;; emmet-mode
+    ;; flycheck
+    ;; indium
+    ;; material-theme
+    ;; py-autopep8
+    ;; racket-mode
+    ;; ;; tern
     web-mode
-    yasnippet
-    yasnippet-snippets
-    ;; themes
+    ;; yasnippet
+    ;; yasnippet-snippets
+    ;; ;; themes
     habamax-theme
-    zenburn-theme
+    ;; zenburn-theme
     ;; javascript
-    js2-mode
-    company-tern
+    ;; js2-mode
+    ;; company-tern
     ;; writing
     flymd
     writeroom-mode
@@ -62,59 +62,59 @@
 ;;  t)
 
 ;; hunspell
-(add-to-list 'exec-path  "c:/Program Files/hunspell-1.3.2-3-w32-bin/bin/")
+;; (add-to-list 'exec-path  "c:/Program Files/hunspell-1.3.2-3-w32-bin/bin/")
 
-(setq ispell-program-name (locate-file "hunspell"
-				       exec-path exec-suffixes
-				       'file-executable-p))
- (setq ispell-local-dictionary-alist '(
+;; (setq ispell-program-name (locate-file "hunspell"
+;; 				       exec-path exec-suffixes
+;; 				       'file-executable-p))
+;;  (setq ispell-local-dictionary-alist '(
 
-       (nil
-           "[[:alpha:]]"
-           "[^[:alpha:]]"
-           "[']"
-           t
-           ("-d" "en_GB" "-p" "D:\\hunspell\\share\\hunspell")
-           nil
-           utf-8)
-
-       ("american"
-           "[[:alpha:]]"
-           "[^[:alpha:]]"
-           "[']"
-           t
-           ("-d" "en_US" "-p" "D:\\hunspell\\share\\hunspell")
-           nil
-           utf-8)
-       ("british"
-           "[[:alpha:]]"
-           "[^[:alpha:]]"
-           "[']"
-           t
-           ("-d" "en_GB" "-p" "D:\\hunspell\\share\\hunspell")
-           nil
-           utf-8)
-       ("russian"
-           "[АБВГДЕЁЖЗИЙКЛМHОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]"
-           "[^АБВГДЕЁЖЗИЙКЛМHОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]"
-           "[']"
-           t
-           ("-d" "ru_RU" "-p" "D:\\hunspell\\share\\hunspell")
-           nil
-           utf-8)
-;;        ("francais"
-;;            "[[:alpha:]ÀÂÇÈÉÊËÎÏÔÙÛÜàâçèéêëîïôùûü]"
-;;            "[^[:alpha:]ÀÂÇÈÉÊËÎÏÔÙÛÜàâçèéêëîïôùûü]"
-;;            "[-']"
+;;        (nil
+;;            "[[:alpha:]]"
+;;            "[^[:alpha:]]"
+;;            "[']"
 ;;            t
-;;            ("-d" "fr-classique" "-p" 
-;; "D:\\hunspell\\share\\hunspell\\personal.fr")
+;;            ("-d" "en_GB" "-p" "D:\\hunspell\\share\\hunspell")
 ;;            nil
 ;;            utf-8)
-       ;;         )
-       ))
 
-(require 'ispell)
+;;        ("american"
+;;            "[[:alpha:]]"
+;;            "[^[:alpha:]]"
+;;            "[']"
+;;            t
+;;            ("-d" "en_US" "-p" "D:\\hunspell\\share\\hunspell")
+;;            nil
+;;            utf-8)
+;;        ("british"
+;;            "[[:alpha:]]"
+;;            "[^[:alpha:]]"
+;;            "[']"
+;;            t
+;;            ("-d" "en_GB" "-p" "D:\\hunspell\\share\\hunspell")
+;;            nil
+;;            utf-8)
+;;        ("russian"
+;;            "[АБВГДЕЁЖЗИЙКЛМHОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]"
+;;            "[^АБВГДЕЁЖЗИЙКЛМHОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]"
+;;            "[']"
+;;            t
+;;            ("-d" "ru_RU" "-p" "D:\\hunspell\\share\\hunspell")
+;;            nil
+;;            utf-8)
+;; ;;        ("francais"
+;; ;;            "[[:alpha:]ÀÂÇÈÉÊËÎÏÔÙÛÜàâçèéêëîïôùûü]"
+;; ;;            "[^[:alpha:]ÀÂÇÈÉÊËÎÏÔÙÛÜàâçèéêëîïôùûü]"
+;; ;;            "[-']"
+;; ;;            t
+;; ;;            ("-d" "fr-classique" "-p" 
+;; ;; "D:\\hunspell\\share\\hunspell\\personal.fr")
+;; ;;            nil
+;; ;;            utf-8)
+;;        ;;         )
+;;        ))
+
+;; (require 'ispell)
 
 
 (setq holiday-local-holidays '((holiday-fixed 1 7 "Рождество Христово")
@@ -125,12 +125,12 @@
 			       (holiday-fixed 6 12 "День России")
 			       (holiday-fixed 11 4 "День народного единства")))
 (setq org-entities-user '("yat" "" "" "" "" "ѣ"))
-(require 'org-ref)
+;; (require 'org-ref)
 
 ;; toc-org
-(if (require 'toc-org nil t)
-    (add-hook 'org-mode-hook 'toc-org-mode)
-  (warn "toc-org not found"))
+;; (if (require 'toc-org nil t)
+;;     (add-hook 'org-mode-hook 'toc-org-mode)
+;;   (warn "toc-org not found"))
 
 ;; lilypond-mode
 ;; from lilypond-init.el
@@ -166,7 +166,16 @@
  '(hl-sexp-background-color "#efebe9")
  '(org-agenda-files
    (quote
-    ("e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org" "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
+    (
+     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
+     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й\ семестр/yspu.org"
+     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
+     ;; "e:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org"
+     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
+     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й\ семестр/yspu.org"
+     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
+     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org"
+     )))
  '(org-latex-classes
    (quote
     (("coursework" "\\documentclass{coursework}"
@@ -194,7 +203,32 @@
  '(org-latex-default-class "article")
  '(package-selected-packages
    (quote
-    (org zenburn-theme yasnippet-snippets writeroom-mode web-mode vlf use-package toc-org spacemacs-theme racket-mode py-autopep8 ox-hugo ox-gfm org-ref material-theme lorem-ipsum indium habamax-theme flymd flycheck emmet-mode elpy ein company-tern)))
+    (
+     org
+     ;; zenburn-theme
+     ;; yasnippet-snippets
+     writeroom-mode
+     web-mode
+     ;; vlf
+     use-package
+     toc-org
+     ;; spacemacs-theme
+     ;; racket-mode
+     py-autopep8
+     ox-hugo
+     ox-gfm
+     org-ref
+     ;; material-theme
+     lorem-ipsum
+     ;; indium
+     habamax-theme
+     flymd
+     flycheck
+     emmet-mode
+     elpy
+     ;; ein
+     ;; company-tern
+     )))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -217,9 +251,10 @@
      (340 . "#FFA000")
      (360 . "#558b2f"))))
  '(vc-annotate-very-old-color nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "SystemWindow" :foreground "SystemWindowText" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Hack")))))
+
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:inherit nil :stipple nil :background "SystemWindow" :foreground "SystemWindowText" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Hack")))))
