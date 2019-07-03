@@ -155,12 +155,11 @@
  '(hl-sexp-background-color "#efebe9")
  '(org-agenda-files
    (quote
-    (
-     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
-     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й\ семестр/yspu.org"
-     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
-     "~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org"
-     )))
+    ("~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/методика преподавания истории/лабораторные/portfolio.org"
+     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
+     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org"
+     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
+     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
  '(org-latex-classes
    (quote
     (("coursework" "\\documentclass{coursework}"
@@ -188,8 +187,7 @@
  '(org-latex-default-class "article")
  '(package-selected-packages
    (quote
-    (
-     org
+    (org
      writeroom-mode
      web-mode
      use-package
@@ -203,8 +201,7 @@
      flymd
      flycheck
      emmet-mode
-     elpy
-     )))
+     elpy)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -228,3 +225,9 @@
      (360 . "#558b2f"))))
  '(vc-annotate-very-old-color nil))
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
