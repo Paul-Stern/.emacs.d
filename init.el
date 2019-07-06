@@ -47,10 +47,10 @@
 
 ;; habamax-theme
 ;; Using use-package
-(use-package habamax-theme
-  :config
-  (setq habamax-theme-variable-heading-heights t)
-  (load-theme 'habamax t))
+;; (use-package habamax-theme
+;;   :config
+;;   (setq habamax-theme-variable-heading-heights t)
+;;   (load-theme 'habamax t))
 
 
 ;; BASIC CUSTOMIZATION
@@ -125,12 +125,12 @@
 			       (holiday-fixed 6 12 "День России")
 			       (holiday-fixed 11 4 "День народного единства")))
 (setq org-entities-user '("yat" "" "" "" "" "ѣ"))
-(require 'org-ref)
+;; (require 'org-ref)
 
 ;; toc-org
-(if (require 'toc-org nil t)
-    (add-hook 'org-mode-hook 'toc-org-mode)
-  (warn "toc-org not found"))
+;; (if (require 'toc-org nil t)
+;;     (add-hook 'org-mode-hook 'toc-org-mode)
+;;   (warn "toc-org not found"))
 
 ;; lilypond-mode
 ;; from lilypond-init.el
