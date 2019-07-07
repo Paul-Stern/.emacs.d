@@ -24,9 +24,14 @@
     ;; themes
     habamax-theme
     ;; company-tern
+    ;; Markdown
     flymd
+    markdown-preview-eww
+    markdown-preview-mode
     writeroom-mode
     ;; org backends
+    ox-epub
+    ox-gfm
     ox-hugo
     ))
 
@@ -42,71 +47,6 @@
   (setq habamax-theme-variable-heading-heights t)
   (load-theme 'habamax t))
 
-
-;; BASIC CUSTOMIZATION
-;; --------------------------------------
-
-;; (load-theme
-;;  'material ;; load material theme
-;;  ;; 'zenburn
-;;  t)
-
-;; hunspell
-;; (add-to-list 'exec-path  "c:/Program Files/hunspell-1.3.2-3-w32-bin/bin/")
-
-;; (setq ispell-program-name (locate-file "hunspell"
-;; 				       exec-path exec-suffixes
-;; 				       'file-executable-p))
-;;  (setq ispell-local-dictionary-alist '(
-
-;;        (nil
-;;            "[[:alpha:]]"
-;;            "[^[:alpha:]]"
-;;            "[']"
-;;            t
-;;            ("-d" "en_GB" "-p" "D:\\hunspell\\share\\hunspell")
-;;            nil
-;;            utf-8)
-
-;;        ("american"
-;;            "[[:alpha:]]"
-;;            "[^[:alpha:]]"
-;;            "[']"
-;;            t
-;;            ("-d" "en_US" "-p" "D:\\hunspell\\share\\hunspell")
-;;            nil
-;;            utf-8)
-;;        ("british"
-;;            "[[:alpha:]]"
-;;            "[^[:alpha:]]"
-;;            "[']"
-;;            t
-;;            ("-d" "en_GB" "-p" "D:\\hunspell\\share\\hunspell")
-;;            nil
-;;            utf-8)
-;;        ("russian"
-;;            "[АБВГДЕЁЖЗИЙКЛМHОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]"
-;;            "[^АБВГДЕЁЖЗИЙКЛМHОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]"
-;;            "[']"
-;;            t
-;;            ("-d" "ru_RU" "-p" "D:\\hunspell\\share\\hunspell")
-;;            nil
-;;            utf-8)
-;; ;;        ("francais"
-;; ;;            "[[:alpha:]ÀÂÇÈÉÊËÎÏÔÙÛÜàâçèéêëîïôùûü]"
-;; ;;            "[^[:alpha:]ÀÂÇÈÉÊËÎÏÔÙÛÜàâçèéêëîïôùûü]"
-;; ;;            "[-']"
-;; ;;            t
-;; ;;            ("-d" "fr-classique" "-p" 
-;; ;; "D:\\hunspell\\share\\hunspell\\personal.fr")
-;; ;;            nil
-;; ;;            utf-8)
-;;        ;;         )
-;;        ))
-
-;; (require 'ispell)
-
-
 (setq holiday-local-holidays '((holiday-fixed 1 7 "Рождество Христово")
 			       (holiday-fixed 2 23 "День защитника Отечества")
 			       (holiday-fixed 3 8 "Международный женский день")
@@ -116,22 +56,17 @@
 			       (holiday-fixed 11 4 "День народного единства")))
 (setq org-entities-user '("yat" "" "" "" "" "ѣ"))
 
-;; toc-org
-;; (if (require 'toc-org nil t)
-;;     (add-hook 'org-mode-hook 'toc-org-mode)
-;;   (warn "toc-org not found"))
-
 ;; lilypond-mode
 ;; from lilypond-init.el
 
-;; start lilypond-init.el 
-(setq load-path (append (list (expand-file-name "~/.emacs.d/site-lisp")) load-path))
+;; ;; start lilypond-init.el 
+;; (setq load-path (append (list (expand-file-name "~/.emacs.d/site-lisp")) load-path))
 
-(autoload 'LilyPond-mode "lilypond-mode" "LilyPond Editing Mode" t)
-(add-to-list 'auto-mode-alist '("\\.ly$" . LilyPond-mode))
-(add-to-list 'auto-mode-alist '("\\.ily$" . LilyPond-mode))
-(add-hook 'LilyPond-mode-hook (lambda () (turn-on-font-lock)))
-;; end lilypond-init.el
+;; (autoload 'LilyPond-mode "lilypond-mode" "LilyPond Editing Mode" t)
+;; (add-to-list 'auto-mode-alist '("\\.ly$" . LilyPond-mode))
+;; (add-to-list 'auto-mode-alist '("\\.ily$" . LilyPond-mode))
+;; (add-hook 'LilyPond-mode-hook (lambda () (turn-on-font-lock)))
+;; ;; end lilypond-init.el
 
 
 ; (autoload 'LilyPond-mode "lilypond-mode")
@@ -155,17 +90,17 @@
  '(hl-sexp-background-color "#efebe9")
  '(org-agenda-files
    (quote
-    ("~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/методика преподавания истории/лабораторные/portfolio.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
+    ("~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/методика преподавания истории/лабораторные/portfolio.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
  '(org-latex-classes
    (quote
     (("coursework" "\\documentclass{coursework}"
       ("" . ""))
      ("custom" "\\documentclass[14pt]{custom}"
-      ("" . ""))
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
      ("article" "\\documentclass[11pt]{article}"
       ("\\section{%s}" . "\\section*{%s}")
       ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -187,21 +122,7 @@
  '(org-latex-default-class "article")
  '(package-selected-packages
    (quote
-    (org
-     writeroom-mode
-     web-mode
-     use-package
-     toc-org
-     py-autopep8
-     ox-hugo
-     ox-gfm
-     org-ref
-     lorem-ipsum
-     habamax-theme
-     flymd
-     flycheck
-     emmet-mode
-     elpy)))
+    (markdown-preview-eww markdown-preview-mode org writeroom-mode web-mode use-package toc-org py-autopep8 ox-hugo ox-gfm org-ref lorem-ipsum habamax-theme flymd flycheck emmet-mode elpy)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
