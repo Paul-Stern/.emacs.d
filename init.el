@@ -14,29 +14,24 @@
 (defvar myPackages
   '(;;
     use-package
-    ;; free space
-    ein    
-    elpy
     emmet-mode
     flycheck
-    indium
-    material-theme
-    py-autopep8
-    racket-mode
-    ;; tern
-    web-mode
-    yasnippet
-    yasnippet-snippets
+    ;; py-autopep8
+    ;; ;; tern
+    ;; web-mode
+    ;; yasnippet
+    ;; yasnippet-snippets
     ;; themes
     habamax-theme
-    zenburn-theme
-    ;; javascript
-    js2-mode
-    company-tern
-    ;; writing
+    ;; company-tern
+    ;; Markdown
     flymd
+    markdown-preview-eww
+    markdown-preview-mode
     writeroom-mode
     ;; org backends
+    ox-epub
+    ox-gfm
     ox-hugo
     ))
 
@@ -127,10 +122,10 @@
 (setq org-entities-user '("yat" "" "" "" "" "ѣ"))
 (require 'org-ref)
 
-;; toc-org
-(if (require 'toc-org nil t)
-    (add-hook 'org-mode-hook 'toc-org-mode)
-  (warn "toc-org not found"))
+;; ;; toc-org
+;; (if (require 'toc-org nil t)
+;;     (add-hook 'org-mode-hook 'toc-org-mode)
+;;   (warn "toc-org not found"))
 
 ;; lilypond-mode
 ;; from lilypond-init.el
@@ -172,7 +167,11 @@
     (("coursework" "\\documentclass{coursework}"
       ("" . ""))
      ("custom" "\\documentclass[14pt]{custom}"
-      ("" . ""))
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
      ("article" "\\documentclass[11pt]{article}"
       ("\\section{%s}" . "\\section*{%s}")
       ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -194,7 +193,7 @@
  '(org-latex-default-class "article")
  '(package-selected-packages
    (quote
-    (org zenburn-theme yasnippet-snippets writeroom-mode web-mode vlf use-package toc-org spacemacs-theme racket-mode py-autopep8 ox-hugo ox-gfm org-ref material-theme lorem-ipsum indium habamax-theme flymd flycheck emmet-mode elpy ein company-tern)))
+    (markdown-preview-eww markdown-preview-mode org writeroom-mode web-mode use-package toc-org py-autopep8 ox-hugo ox-gfm org-ref lorem-ipsum habamax-theme flymd flycheck emmet-mode elpy)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
