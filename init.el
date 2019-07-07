@@ -56,6 +56,9 @@
 			       (holiday-fixed 11 4 "День народного единства")))
 (setq org-entities-user '("yat" "" "" "" "" "ѣ"))
 
+;; key for odroid terminal emacs
+(global-set-key (kbd "<f9>") 'comment-line )
+
 ;; lilypond-mode
 ;; from lilypond-init.el
 
