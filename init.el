@@ -155,11 +155,7 @@
  '(hl-sexp-background-color "#efebe9")
  '(org-agenda-files
    (quote
-    ("~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/методика преподавания истории/лабораторные/portfolio.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
-     "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
+    ("~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/методика преподавания истории/лабораторные/portfolio.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
  '(org-latex-classes
    (quote
     (("coursework" "\\documentclass{coursework}"
@@ -187,21 +183,7 @@
  '(org-latex-default-class "article")
  '(package-selected-packages
    (quote
-    (org
-     writeroom-mode
-     web-mode
-     use-package
-     toc-org
-     py-autopep8
-     ox-hugo
-     ox-gfm
-     org-ref
-     lorem-ipsum
-     habamax-theme
-     flymd
-     flycheck
-     emmet-mode
-     elpy)))
+    (org writeroom-mode web-mode use-package toc-org py-autopep8 ox-hugo ox-gfm org-ref lorem-ipsum habamax-theme flymd flycheck emmet-mode elpy)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -230,4 +212,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "SystemWindow" :foreground "SystemWindowText" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Hack")))))
