@@ -155,7 +155,11 @@
  '(hl-sexp-background-color "#efebe9")
  '(org-agenda-files
    (quote
-    ("~/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/методика преподавания истории/лабораторные/portfolio.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org" "/media/odroid/24D9880F12A4A119/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
+    ("f:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/методика преподавания истории/лабораторные/portfolio.org"
+     "f:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/work/teaching/english/eng.org"
+     "f:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/studying/6-й семестр/yspu.org"
+     "f:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/notebook.org"
+     "f:/paul/4d8c8994-70e4-4174-88e2-7bf59019245b/home/diary.org")))
  '(org-latex-classes
    (quote
     (("coursework" "\\documentclass{coursework}"
