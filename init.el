@@ -35,8 +35,8 @@
       (package-install package)))
       myPackages)
 
-;; habamax-theme
-;; Using use-package
+;; ;; habamax-theme
+;; ;; Using use-package
 ;; (use-package habamax-theme
 ;;   :config
 ;;   (setq habamax-theme-variable-heading-heights t)
