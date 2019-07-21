@@ -1,0 +1,11 @@
+encoding error:
+
+Рождество Христово
+
+(setq holiday-local-holidays '((holiday-fixed 1 7 "Рождество Христово")
+			       (holiday-fixed 2 23 "День защитника Отечества")
+			       (holiday-fixed 3 8 "Международный женский день")
+			       (holiday-fixed 5 1 "Праздник Весны и Труда")
+			       (holiday-fixed 5 9 "День Победы")
+			       (holiday-fixed 6 12 "День России")
+			       (holiday-fixed 11 4 "День народного единства")))
